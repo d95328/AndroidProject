@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="basePink">#f09494</color>
+    <color name="hoverPink">#ff9494</color>
     <color name="darkPink">#eb6868</color>
     <color name="hotpink">#eb80b0 </color>
     <color name="white">#ffffff</color>

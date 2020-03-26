@@ -27,6 +27,7 @@
             android:gravity="center"
             android:background="@color/darkPink"
             android:text="USER ACCOUNT"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="25sp" />
@@ -39,11 +40,10 @@
         android:background="@color/darkPink">
         <ImageView
             android:id="@+id/userImage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/band"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@drawable/account"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_marginTop="15dp"
             android:layout_alignParentLeft="true"
             android:layout_alignBottom="@+id/profileHint"/>
@@ -72,6 +72,47 @@
             android:textSize="10sp"
             android:textStyle="bold"
             android:layout_toEndOf="@+id/userImage"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/likeContents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkPink"
+        android:padding="5dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/likeList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="즐겨찾기 된 게시글"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"/>
+        <TextView
+            android:id="@+id/numLilst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/likeList"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="8dp"
+            android:text="index개 존재"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text=">"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:gravity=""/>
     </RelativeLayout>
 
 
