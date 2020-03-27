@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="interest_array">
+        <item>연애</item>
+        <item>기념일</item>
+        <item>이성친구</item>
+        <item>데이트</item>
+        <item>다툼</item>
+    </string-array>
+</resources>

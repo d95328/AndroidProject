@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.AndroidProject.MainActivity;
@@ -24,13 +26,14 @@ public class JoinActivity extends AppCompatActivity {
         cancelBtn = findViewById(R.id.cancel_btn);
         emailBtn = findViewById(R.id.email_btn);
         termsBtn = findViewById(R.id.terms_btn);
-
         signBtn.setOnClickListener(new IntentListener());
         cancelBtn.setOnClickListener(new IntentListener());
         emailBtn.setOnClickListener(new IntentListener());
         termsBtn.setOnClickListener(new IntentListener());
 
-    }
+
+    }//end of onCreate
+
     class IntentListener implements  View.OnClickListener {
         Intent intent;
 

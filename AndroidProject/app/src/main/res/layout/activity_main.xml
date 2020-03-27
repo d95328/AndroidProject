@@ -18,6 +18,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#eb6868"
             app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/white"
             app:layout_scrollFlags="scroll|enterAlways"/>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.recyclerview.widget.RecyclerView
@@ -27,4 +28,5 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     </androidx.recyclerview.widget.RecyclerView>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

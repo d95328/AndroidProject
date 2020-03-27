@@ -7,17 +7,22 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
+import com.example.AndroidProject.MainActivity;
 import com.example.AndroidProject.R;
 
 import static android.graphics.Color.*;
 
 public class AccountActivity extends AppCompatActivity {
-    RelativeLayout relProfile, relContents;
+    RelativeLayout relProfile, relLike, relMy, relGrade, relSecure;
     Context context;
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +31,12 @@ public class AccountActivity extends AppCompatActivity {
 
         /*ViewGroup layout = (ViewGroup) findViewById(R.id.main_layout);
         layout.setOnClickListener(new OnClickListener() {*/
-        relProfile = findViewById(R.id.profileChange);
+        relProfile = findViewById(R.id.relProfile);
+        relLike = findViewById(R.id.relLike);
+        relMy = findViewById(R.id.relMy);
+        relGrade = findViewById(R.id.relGrage);
+        relSecure = findViewById(R.id.relSecure);
+
         relProfile.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -34,33 +44,86 @@ public class AccountActivity extends AppCompatActivity {
                     relProfile.setBackgroundColor(Color.parseColor("#ff9494"));
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     relProfile.setBackgroundColor(Color.parseColor("#eb6868"));
-                    Intent intent = new Intent(AccountActivity.this, ProfileActivity.class);
+                    intent = new Intent(AccountActivity.this, ProfileActivity.class);
                     startActivity(intent);
                 }
                 return true;
             }
         });
-        /*relProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AccountActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
-        });*/
 
-        relContents = findViewById(R.id.likeContents);
-        relContents.setOnTouchListener(new View.OnTouchListener() {
+        relLike.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                    relContents.setBackgroundColor(Color.parseColor("#ff9494"));
+                    relLike.setBackgroundColor(Color.parseColor("#ff9494"));
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    relContents.setBackgroundColor(Color.parseColor("#eb6868"));
+                    relLike.setBackgroundColor(Color.parseColor("#eb6868"));
+                    intent = new Intent(AccountActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
                 return true;
             }
         });
 
+        relMy.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    relMy.setBackgroundColor(Color.parseColor("#ff9494"));
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    relMy.setBackgroundColor(Color.parseColor("#eb6868"));
+                    intent = new Intent(AccountActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                return true;
+            }
+        });
 
+        relGrade.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    relGrade.setBackgroundColor(Color.parseColor("#ff9494"));
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    relGrade.setBackgroundColor(Color.parseColor("#eb6868"));
+                    intent = new Intent(AccountActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                return true;
+            }
+        });
+
+        relSecure.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    relSecure.setBackgroundColor(Color.parseColor("#ff9494"));
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    relSecure.setBackgroundColor(Color.parseColor("#eb6868"));
+                    intent = new Intent(AccountActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                return true;
+            }
+        });
+
+        /*touchLayout(relLike);*/
     }//end of onCreate
+
+   /* public void touchLayout(RelativeLayout relativeLayout) {
+        RelativeLayout.OnTouchListener onTouchListener = new RelativeLayout.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    relativeLayout.setBackgroundColor(Color.parseColor("#ff9494"));
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    relativeLayout.setBackgroundColor(Color.parseColor("#eb6868"));
+                    intent = new Intent(AccountActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                return true;
+            }
+        };
+    }//end of method()*/
+
 }//end of class

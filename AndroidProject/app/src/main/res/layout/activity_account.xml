@@ -34,7 +34,7 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/profileChange"
+        android:id="@+id/relProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/darkPink">
@@ -75,7 +75,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/likeContents"
+        android:id="@+id/relLike"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/darkPink"
@@ -101,6 +101,117 @@
             android:layout_marginTop="2dp"
             android:paddingLeft="8dp"
             android:text="index개 존재"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text=">"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:gravity=""/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relMy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkPink"
+        android:padding="5dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/myContents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내가 쓴 게시물"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"/>
+        <TextView
+            android:id="@+id/numMy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myContents"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="8dp"
+            android:text="index개 존재"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text=">"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:gravity=""/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relGrage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkPink"
+        android:padding="5dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/myGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 등급 확인"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text=">"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:gravity=""/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relSecure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkPink"
+        android:padding="5dp"
+        android:layout_marginTop="100dp">
+        <TextView
+            android:id="@+id/secText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보안 설정"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"/>
+        <TextView
+            android:id="@+id/secHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secText"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="8dp"
+            android:text="비민번호 변경"
             android:textColor="@color/white"
             android:textSize="10sp"
             android:textStyle="bold"/>
