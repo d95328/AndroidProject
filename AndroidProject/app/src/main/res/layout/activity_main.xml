@@ -10,6 +10,7 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
         android:fitsSystemWindows="true">
 
         <androidx.appcompat.widget.Toolbar
@@ -17,16 +18,399 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#eb6868"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:titleTextColor="@color/white"
+            app:subtitleTextColor="@color/white"
             app:layout_scrollFlags="scroll|enterAlways"/>
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyler_view"
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    </androidx.recyclerview.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/basePink">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/notice1"
+                android:background="@color/darkPink">
+                <TextView
+                    android:id="@+id/noticeTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[공지사항]"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/userImage"/>
+                <TextView
+                    android:id="@+id/noticeContent1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="8dp"
+                    android:text="2020-03-29 패치 노트"
+                    android:layout_toEndOf="@id/noticeTitle1"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:id="@+id/notice2"
+                android:background="@color/darkPink"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/noticeTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[공지사항]"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"/>
+                <TextView
+                    android:id="@+id/noticeContent2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/noticeTitle2"
+                    android:paddingLeft="8dp"
+                    android:text="2020-03-29 패치 노트"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:id="@+id/notice3"
+                android:background="@color/darkPink"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/noticeTitle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[공지사항]"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"/>
+                <TextView
+                    android:id="@+id/noticeContent3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/noticeTitle3"
+                    android:paddingLeft="8dp"
+                    android:text="2020-03-30 패치 노트"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <HorizontalScrollView
+                android:id="@+id/weekBest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notice3"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/best1"
+                    android:background="@color/darkPink"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/bestTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="주간\n 인기\n 게시글"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/bestTitle1"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/bestTitle"
+                        android:textColor="@color/darkPink"
+                        android:padding="10dp"
+                        android:background="@color/white"
+                        android:text="주간인기글1위"/>
+                    <TextView
+                        android:id="@+id/bestTitle2"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/darkPink"
+                        android:padding="10dp"
+                        android:layout_toRightOf="@id/bestTitle1"
+                        android:background="@color/white"
+                        android:text="주간인기글2위"/>
+                    <TextView
+                        android:id="@+id/bestTitle3"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/darkPink"
+                        android:padding="10dp"
+                        android:layout_toRightOf="@id/bestTitle2"
+                        android:background="@color/white"
+                        android:text="주간인기글3위"/>
+                </RelativeLayout>
+            </HorizontalScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/weekBest"
+                android:orientation="vertical">
+
+                <!--content1 start-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/darkPink">
+                    <ImageView
+                        android:id="@+id/userImg1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/band"
+                        android:layout_margin="10dp"/>
+                    <TextView
+                        android:id="@+id/userNick1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="도우니"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/userImg1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30분 전"
+                        android:layout_toRightOf="@id/userImg1"
+                        android:layout_below="@id/userNick1"/>
+                    <TextView
+                        android:id="@+id/contentTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/userImg1"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="제 고민 좀 들어주세요"/>
+                    <TextView
+                        android:id="@+id/content1"
+                        android:layout_width="600dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contentTitle1"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec nulla nisl. Ut id ex non lacus iaculis tincidunt. Vivamus efficitur ligula at leo blandit... 자세히보기"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/content1"
+                        android:gravity="right">
+                        <TextView
+                            android:id="@+id/recommend1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:textStyle="bold"
+                            android:text="추천 수 0"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/recommend1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:textStyle="bold"
+                            android:text="댓글 수 0"/>
+                    </RelativeLayout>
+
+                </RelativeLayout> <!--end of content1-->
+
+                <!--content2 start-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/darkPink"
+                    android:layout_marginTop="10dp">
+                    <ImageView
+                        android:id="@+id/userImg2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/band"
+                        android:layout_margin="10dp"/>
+                    <TextView
+                        android:id="@+id/userNick2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="심청이"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/userImg2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1시간 전"
+                        android:layout_toRightOf="@id/userImg2"
+                        android:layout_below="@id/userNick2"/>
+                    <TextView
+                        android:id="@+id/contentTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/userImg2"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="기념일 선물 추천좀해주세요!"/>
+                    <TextView
+                        android:id="@+id/content2"
+                        android:layout_width="600dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contentTitle2"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec nulla nisl. Ut id ex non lacus iaculis tincidunt. Vivamus efficitur ligula at leo blandit... 자세히보기"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/content2"
+                        android:gravity="right">
+                        <TextView
+                            android:id="@+id/recommend2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:textStyle="bold"
+                            android:text="추천 수 8"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/recommend2"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:textStyle="bold"
+                            android:text="댓글 수 4"/>
+                    </RelativeLayout>
+                </RelativeLayout> <!--end of content2-->
+
+                <!--content3 start-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/darkPink"
+                    android:layout_marginTop="10dp">
+                    <ImageView
+                        android:id="@+id/userImg3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/band"
+                        android:layout_margin="10dp"/>
+                    <TextView
+                        android:id="@+id/userNick3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="홍길동"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/userImg3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2시간 전"
+                        android:layout_toRightOf="@id/userImg3"
+                        android:layout_below="@id/userNick3"/>
+                    <TextView
+                        android:id="@+id/contentTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/userImg3"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="남자친구가 돈을 너무 막써요"/>
+                    <TextView
+                        android:id="@+id/content3"
+                        android:layout_width="600dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contentTitle3"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec nulla nisl. Ut id ex non lacus iaculis tincidunt. Vivamus efficitur ligula at leo blandit... 자세히보기"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/content3"
+                        android:gravity="right">
+                        <TextView
+                            android:id="@+id/recommend3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:textStyle="bold"
+                            android:text="추천 수 27"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/recommend3"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:textStyle="bold"
+                            android:text="댓글 수 20"/>
+                    </RelativeLayout>
+                </RelativeLayout> <!--end of content3-->
+
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

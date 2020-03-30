@@ -26,25 +26,29 @@ public class JoinActivity extends AppCompatActivity {
         cancelBtn = findViewById(R.id.cancel_btn);
         emailBtn = findViewById(R.id.email_btn);
         termsBtn = findViewById(R.id.terms_btn);
+
         signBtn.setOnClickListener(new IntentListener());
-        cancelBtn.setOnClickListener(new IntentListener());
         emailBtn.setOnClickListener(new IntentListener());
         termsBtn.setOnClickListener(new IntentListener());
+
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alert("회원가입을 취소하셨습니다.");
+                finish();
+            }
+        });
 
 
     }//end of onCreate
 
     class IntentListener implements  View.OnClickListener {
         Intent intent;
-
         @Override
         public void onClick(View v) {
             if (v.getId() == R.id.sign_btn) {
                 intent = new Intent(JoinActivity.this, MainActivity.class);
-                alert("회원가입 기능이 구현되지 않았습니다.");
-            } else if (v.getId() == R.id.cancel_btn) {
-                intent = new Intent(JoinActivity.this, MainActivity.class);
-                alert("가입을 취소하셨습니다.");
+                alert("회원가입을 축하드립니다.");
             } else if (v.getId() == R.id.email_btn) {
                 alert("중복되지 않았습니다.");
                 return;

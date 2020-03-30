@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        RecyclerView recyclerView = findViewById(R.id.recyler_view);
+        /*RecyclerView recyclerView = findViewById(R.id.rvMain);*/
 
 
     }//end of onCreatie()

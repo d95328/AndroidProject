@@ -21,8 +21,8 @@ import static android.graphics.Color.*;
 
 public class AccountActivity extends AppCompatActivity {
     RelativeLayout relProfile, relLike, relMy, relGrade, relSecure;
-    Context context;
     Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,65 +37,54 @@ public class AccountActivity extends AppCompatActivity {
         relGrade = findViewById(R.id.relGrage);
         relSecure = findViewById(R.id.relSecure);
 
-        relProfile.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+        relProfile.setOnTouchListener(new IntentListener());
+        relLike.setOnTouchListener(new IntentListener());
+        relMy.setOnTouchListener(new IntentListener());
+        relGrade.setOnTouchListener(new IntentListener());
+        relSecure.setOnTouchListener(new IntentListener());
+
+    }//end of onCreate
+
+
+
+    //IntentListener class
+    private class IntentListener implements RelativeLayout.OnTouchListener {
+        Intent intent;
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            if (v.getId() == R.id.relProfile) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     relProfile.setBackgroundColor(Color.parseColor("#ff9494"));
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     relProfile.setBackgroundColor(Color.parseColor("#eb6868"));
                     intent = new Intent(AccountActivity.this, ProfileActivity.class);
                     startActivity(intent);
                 }
-                return true;
-            }
-        });
-
-        relLike.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+            } else if (v.getId() == R.id.relLike) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     relLike.setBackgroundColor(Color.parseColor("#ff9494"));
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     relLike.setBackgroundColor(Color.parseColor("#eb6868"));
                     intent = new Intent(AccountActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
-                return true;
-            }
-        });
-
-        relMy.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+            } else if (v.getId() == R.id.relMy) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     relMy.setBackgroundColor(Color.parseColor("#ff9494"));
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     relMy.setBackgroundColor(Color.parseColor("#eb6868"));
                     intent = new Intent(AccountActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
-                return true;
-            }
-        });
-
-        relGrade.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+            } else if (v.getId() == R.id.relGrage) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     relGrade.setBackgroundColor(Color.parseColor("#ff9494"));
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    relGrade.setBackgroundColor(Color.parseColor("#eb6868"));
+                    relSecure.setBackgroundColor(Color.parseColor("#eb6868"));
                     intent = new Intent(AccountActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
-                return true;
-            }
-        });
-
-        relSecure.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
+            } else if (v.getId() == R.id.relSecure) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     relSecure.setBackgroundColor(Color.parseColor("#ff9494"));
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -103,27 +92,14 @@ public class AccountActivity extends AppCompatActivity {
                     intent = new Intent(AccountActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
-                return true;
             }
-        });
+            return true;
+        }
+    }//end of IntentListener class
 
-        /*touchLayout(relLike);*/
-    }//end of onCreate
-
-   /* public void touchLayout(RelativeLayout relativeLayout) {
-        RelativeLayout.OnTouchListener onTouchListener = new RelativeLayout.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    relativeLayout.setBackgroundColor(Color.parseColor("#ff9494"));
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    relativeLayout.setBackgroundColor(Color.parseColor("#eb6868"));
-                    intent = new Intent(AccountActivity.this, MainActivity.class);
-                    startActivity(intent);
-                }
-                return true;
-            }
-        };
-    }//end of method()*/
+    //토스트 메소드
+    public void alert(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+    }
 
 }//end of class
