@@ -3,14 +3,12 @@ package com.example.AndroidProject;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.AndroidProject.user.AccountActivity;
-import com.example.AndroidProject.user.JoinActivity;
-import com.example.AndroidProject.list.MemberList;
-import com.example.AndroidProject.user.LoginActivity;
+import com.example.AndroidProject.userActivities.AccountActivity;
+import com.example.AndroidProject.userActivities.JoinActivity;
+import com.example.AndroidProject.userActivities.LoginActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -51,10 +49,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.joinView_btn) {
             intent = new Intent(this, JoinActivity.class);
             startActivity(intent);
-        } else if (id == R.id.mListView_btn) {
-            intent = new Intent(this, MemberList.class);
-            startActivity(intent);
-        } else if (id == R.id.accountView_btn) {
+        }  else if (id == R.id.accountView_btn) {
             intent = new Intent(this, AccountActivity.class);
             startActivity(intent);
         }

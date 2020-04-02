@@ -1,14 +1,10 @@
-package com.example.AndroidProject.user;
+package com.example.AndroidProject.userActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Layout;
-import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -16,8 +12,6 @@ import android.widget.Toast;
 
 import com.example.AndroidProject.MainActivity;
 import com.example.AndroidProject.R;
-
-import static android.graphics.Color.*;
 
 public class AccountActivity extends AppCompatActivity {
     RelativeLayout relProfile, relLike, relMy, relGrade, relSecure;

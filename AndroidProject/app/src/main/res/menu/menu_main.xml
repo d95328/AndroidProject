@@ -14,11 +14,6 @@
         android:title="회원가입"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/mListView_btn"
-        android:orderInCategory="100"
-        android:title="회원목록"
-        app:showAsAction="never"/>
-    <item
         android:id="@+id/accountView_btn"
         android:orderInCategory="100"
         android:title="정보수정"

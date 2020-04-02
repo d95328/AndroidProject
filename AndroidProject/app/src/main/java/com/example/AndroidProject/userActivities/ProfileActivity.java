@@ -1,4 +1,4 @@
-package com.example.AndroidProject.user;
+package com.example.AndroidProject.userActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

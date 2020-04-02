@@ -13,11 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.example.AndroidProject.user.ProfileActivity"></activity>
-        <activity android:name="com.example.AndroidProject.user.AccountActivity" />
-        <activity android:name="com.example.AndroidProject.list.MemberList" />
+        <activity android:name="com.example.AndroidProject.userActivities.ProfileActivity"></activity>
+        <activity android:name="com.example.AndroidProject.userActivities.AccountActivity" />
         <activity
             android:name="com.example.AndroidProject.MainActivity"
+            android:launchMode="singleTop"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -26,10 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.AndroidProject.user.LoginActivity" />
-        <activity android:name="com.example.AndroidProject.user.JoinActivity" />
+        <activity android:name="com.example.AndroidProject.userActivities.LoginActivity" />
+        <activity android:name="com.example.AndroidProject.userActivities.JoinActivity" />
         <activity
-            android:name="com.example.AndroidProject.list.MemberList"
+            android:name="com.example.AndroidProject.dto.MemberList"
             tools:ignore="DuplicateActivity" />
     </application>
 

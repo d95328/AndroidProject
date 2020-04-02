@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#f09494"
     android:fillViewport="true"
-    tools:context=".user.JoinActivity">
+    tools:context=".userActivities.JoinActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/join_con"
