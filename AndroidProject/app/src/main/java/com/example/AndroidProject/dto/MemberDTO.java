@@ -1,24 +1,46 @@
 package com.example.AndroidProject.dto;
 
 
+import java.sql.Date;
+
 public class MemberDTO {
     private String m_userid;
     private String m_userpw;
     private String m_nickname;
     private String m_email;
     private String m_gender;
+    private String m_birth;
     private String m_interest;
+    private boolean autoLogin = false;
 
     public MemberDTO() {
 
     }
-    public MemberDTO(String m_userid, String m_userpw, String m_nickname, String m_email, String m_gender, String m_interest) {
+    public MemberDTO(String m_userid, String m_userpw, String m_nickname, String m_email, String m_gender, String m_interest, String m_birth, boolean autoLogin) {
         this.m_userid = m_userid;
         this.m_userpw = m_userpw;
         this.m_nickname = m_nickname;
         this.m_email = m_email;
         this.m_gender = m_gender;
         this.m_interest = m_interest;
+        this.m_birth = m_birth;
+        this.autoLogin = autoLogin;
+    }
+
+    public boolean isAutoLogin() {
+        return autoLogin;
+    }
+
+    public void setAutoLogin(boolean autoLogin) {
+        this.autoLogin = autoLogin;
+    }
+
+    public String getM_birth() {
+        return m_birth;
+    }
+
+    public void setM_birth(String m_birth) {
+        this.m_birth = m_birth;
     }
 
     public String getM_userid() {
@@ -73,9 +95,11 @@ public class MemberDTO {
     public String toString() {
         return "MemberDTO{" +
                 "m_userid='" + m_userid + '\'' +
+                ", m_userpw='" + m_userpw + '\'' +
                 ", m_nickname='" + m_nickname + '\'' +
                 ", m_email='" + m_email + '\'' +
                 ", m_gender='" + m_gender + '\'' +
+                ", m_birth=" + m_birth +
                 ", m_interest='" + m_interest + '\'' +
                 '}';
     }

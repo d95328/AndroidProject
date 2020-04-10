@@ -21,12 +21,13 @@
             android:gravity="center"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp">
-            <ImageView
-                android:id="@+id/imageView"
+            <ImageButton
+                android:id="@+id/logoImg"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
-                android:src="@drawable/band" />
+                android:src="@drawable/band"
+                android:scaleType="fitCenter"/>
         </LinearLayout>
 
         <LinearLayout
@@ -39,7 +40,7 @@
             tools:layout_editor_absoluteX="0dp"
             android:gravity="center">
             <EditText
-                android:id="@+id/text_loginId"
+                android:id="@+id/login_userid"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:hint=" Insert Your ID"
@@ -59,7 +60,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/text_loginPw"
+                android:id="@+id/login_userpw"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/box_detail"
@@ -69,13 +70,34 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/loginPw_area"
+            tools:layout_editor_absoluteX="0dp">
+
+            <CheckBox
+                android:id="@+id/autoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자동 로그인"
+                tools:layout_editor_absoluteY="32dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
             android:maxLines="1"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="200dp">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            tools:layout_editor_absoluteX="0dp">
 
             <Button
                 android:id="@+id/login_btn"

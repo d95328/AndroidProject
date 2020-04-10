@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal"
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
@@ -57,24 +57,36 @@
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <EditText
-                    android:id="@+id/text_userId"
+                    android:id="@+id/join_userId"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/box_detail"
                     android:hint=" Insert Your ID"
                     android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1"
                     android:padding="10dp" />
                 <TextView
                     android:id="@+id/id_reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="This space is REGEX inline field."/>
+                    android:text=""/>
             </LinearLayout>
+            <Button
+                android:id="@+id/doubleIdCheck"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_detail"
+                android:text="중복확인"
+                android:textSize="10sp"
+                android:layout_marginLeft="5dp"
+                android:enabled="false"
+                android:visibility="invisible"/>
         </LinearLayout>
 
         <LinearLayout
@@ -82,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal"
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/joinId_area"
@@ -107,34 +119,38 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/text_userPwd"
+                    android:id="@+id/join_userPw"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/box_detail"
                     android:hint=" Password"
                     android:inputType="textPassword"
+                    android:lines="1"
+                    android:maxLines="1"
                     android:padding="10dp" />
                 <TextView
                     android:id="@+id/pw_reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="This space is REGEX inline field."/>
+                    android:text=""/>
                 <EditText
-                    android:id="@+id/text_userPwdCheck"
+                    android:id="@+id/join_userPwdCheck"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/box_detail"
                     android:hint=" Password Check"
                     android:inputType="textPassword"
+                    android:lines="1"
+                    android:maxLines="1"
                     android:padding="10dp" />
                 <TextView
                     android:id="@+id/pwCheck_reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="This space is REGEX inline field."/>
+                    android:text=""/>
             </LinearLayout>
         </LinearLayout>
 
@@ -143,7 +159,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal"
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/joinPw_area"
@@ -164,19 +180,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/join_nickname"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/box_detail"
                     android:hint=" Insert Your Nickname"
                     android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1"
                     android:padding="10dp" />
                 <TextView
                     android:id="@+id/nickname_reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="This space is REGEX inline field."/>
+                    android:text=""/>
             </LinearLayout>
         </LinearLayout>
 
@@ -185,7 +203,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal"
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/joinNick_area"
@@ -205,27 +223,32 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <EditText
+                    android:id="@+id/join_email"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/box_detail"
                     android:hint="example@naver.com"
+                    android:lines="1"
+                    android:maxLines="1"
                     android:padding="10dp" />
                 <TextView
                     android:id="@+id/email_reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="This space is REGEX inline field."/>
+                    android:text=""/>
             </LinearLayout>
             <Button
-                android:id="@+id/email_btn"
+                android:id="@+id/doubleEmailCheck"
                 android:layout_width="70dp"
                 android:layout_height="35dp"
                 android:background="@drawable/btn_detail"
                 android:text="중복확인"
                 android:textSize="10sp"
-                android:layout_marginTop="10dp"
-                android:textColor="#ffffff" />
+                android:layout_marginLeft="5dp"
+                android:textColor="#ffffff"
+                android:enabled="false"
+                android:visibility="invisible"/>
         </LinearLayout>
 
         <LinearLayout
@@ -233,7 +256,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:padding="5dp"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/joinEmail_area"
@@ -243,20 +266,26 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="BIRTH"
+                android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:textAlignment="center"
                 android:textColor="#ffffff"/>
 
             <DatePicker
-                android:id="@+id/date_picker"
+                android:id="@+id/join_birth"
                 android:layout_width="250dp"
                 android:layout_height="90dp"
                 android:datePickerMode="spinner"
                 android:startYear="1970"
                 android:endYear="2005"
                 android:calendarViewShown="false"/>
+            <TextView
+                android:id="@+id/join_birthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:visibility="invisible"/>
         </LinearLayout>
 
         <LinearLayout
@@ -264,7 +293,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal"
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/joinBirth_area"
@@ -281,25 +310,34 @@
                 android:textStyle="bold" />
 
             <RadioGroup
+                android:id="@+id/join_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 tools:layout_editor_absoluteX="3dp">
 
-                <RadioButton
-                    android:id="@+id/gender_man"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/man"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GENTLEMAN"
-                    android:textColor="#ffffff" />
+                    android:text="남"
+                    android:textColor="#ffffff"
+                    android:buttonTint="@color/white"
+                    android:checked="true"/>
 
-                <RadioButton
-                    android:id="@+id/gender_woman"
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/woman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:text="LADY"
+                    android:text="여"
                     android:textColor="#ffffff" />
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="남"
+                    android:visibility="invisible"/>
             </RadioGroup>
         </LinearLayout>
 
@@ -308,7 +346,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/joinGender_area">
 
@@ -322,10 +360,11 @@
                 android:textSize="18sp" />
             <!--관심사 select box(combo box) -->
             <Spinner
-                android:id="@+id/inter_spinner"
+                android:id="@+id/join_interest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:entries="@array/interest_array"
+                android:backgroundTint="@color/darkPink"
                 android:spinnerMode="dropdown"/>
         </LinearLayout>
 
@@ -342,7 +381,7 @@
             tools:layout_editor_absoluteX="0dp">
 
             <CheckBox
-                android:id="@+id/join_check"
+                android:id="@+id/join_accept"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

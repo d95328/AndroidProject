@@ -3,11 +3,13 @@ package com.example.AndroidProject.userActivities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.AndroidProject.MainActivity;
@@ -15,6 +17,7 @@ import com.example.AndroidProject.R;
 
 public class AccountActivity extends AppCompatActivity {
     RelativeLayout relProfile, relLike, relMy, relGrade, relSecure;
+    SharedPreferences sharedPreferences;
     Intent intent;
 
     @Override
@@ -37,6 +40,10 @@ public class AccountActivity extends AppCompatActivity {
         relGrade.setOnTouchListener(new IntentListener());
         relSecure.setOnTouchListener(new IntentListener());
 
+        TextView nameText = findViewById(R.id.acc_userName);
+        sharedPreferences = getSharedPreferences("userInfo", MODE_PRIVATE);
+        nameText.setText(sharedPreferences.getString("m_nickname", ""));
+
     }//end of onCreate
 
 
@@ -53,6 +60,7 @@ public class AccountActivity extends AppCompatActivity {
                     relProfile.setBackgroundColor(Color.parseColor("#eb6868"));
                     intent = new Intent(AccountActivity.this, ProfileActivity.class);
                     startActivity(intent);
+                    finish();
                 }
             } else if (v.getId() == R.id.relLike) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {

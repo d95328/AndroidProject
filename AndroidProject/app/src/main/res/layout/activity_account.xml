@@ -48,10 +48,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignBottom="@+id/profileHint"/>
         <TextView
-            android:id="@+id/userName"
+            android:id="@+id/acc_userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="한다훈"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -63,7 +63,7 @@
             android:id="@+id/profileHint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/userName"
+            android:layout_below="@+id/acc_userName"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="2dp"
             android:paddingLeft="8dp"
